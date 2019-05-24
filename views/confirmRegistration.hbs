@@ -1,0 +1,22 @@
+<form class="form-signin" method="post" action="/verifyAccount">
+  <span>
+  {{tokenExpired}}
+  {{expireMessage}}
+  </span>
+  {{#each errorMessages}}
+  <div class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    {{this.msg}}
+  </div>
+  {{/each}}
+
+
+
+  <h2 class="form-signin-heading text-centere">Please verify your account!</h2>
+  <input type="text" name="verificationCode" class="form-control" placeholder="Verification Code" require="" >
+  <input type="hidden" class="form-control" name="email" value={{email}}  hidden>
+  <br />
+  <button class="btn btn-primary" name="submit">Verify</button>
+  <span>{{expireMessage}}</span>
+</form>

@@ -1,0 +1,24 @@
+{
+  "name": "code4share",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-session": "^1.15.1",
+    "express-validator": "^3.1.2",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "mongoose": "^4.8.6",
+    "morgan": "~1.9.1",
+    "nodemailer": "^3.1.5",
+    "passport": "^0.3.2",
+    "passport-facebook": "^3.0.0",
+    "passport-local": "^1.0.0"
+  }
+}

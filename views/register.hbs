@@ -1,0 +1,23 @@
+<form class="form-signin" method="post" action="/register">
+  {{#each errorMessages}}
+  <div class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    {{this.msg}}
+  </div>
+  {{/each}}
+
+  <h2 class="form-signin-heading text-centere">New Account</h2>
+  <input type="text" name="name" class="form-control" placeholder="name" require="" autofocus="" value={{name}}>
+  <br />
+  <input type="email" name="email" class="form-control" placeholder="email" require="" autofocus="" value={{email}}>
+  <br />
+  <input type="password" name="password" class="form-control" placeholder="password" require="" value={{passport}}>
+  <br />
+  <input type="password" name="confirmPassword" class="form-control" placeholder="confirm password" require="">
+  <br />
+  <button class="btn btn-primary" name="submit">Register</button>
+  <h4 class="text-center">Or</h4>
+  <br />
+  <a href="/auth/facebook" class="btn btn-lg btn-success">Sign up with facebook</a>
+</form>

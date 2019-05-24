@@ -1,0 +1,12 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+.form-signin{
+  max-width: 300px;
+  padding: 15px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+}
