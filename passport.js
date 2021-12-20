@@ -19,14 +19,14 @@ function(username,password,done){
   User.findOne({email:username}, (err,user) =>{
     if(err)return done(err);
     if(!user) return done(null,false,{
-      message:"Incorrect username or password"
+      message:"User not found!"
     });
     if(!user.validPassword(password)){
       return done(null,false,{message:"Incorrect username or password"});
     }
-    if(!user.isVerified()){
-      return done(null,false,{message:'user is not verified, please verify first'});
-    }
+    // if(!user.isVerified()){
+    //   return done(null,false,{message:'user is not verified, please verify first'});
+    // }
     return done(null,user);
   })
 }));

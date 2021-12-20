@@ -47,13 +47,14 @@ helpers.saveUser = (user,tokenToValidate,res,callback) =>{
         errorMessage:err,
       }));
     }else{
-      helpers.sendMail(user.email,'verify code4share account',
-        `your code for verification is ${tokenToValidate}`, () =>{
-          return callback(res.render('confirmRegistration',{
-            email:user.email,
-            message:"An email has been sent to your mailbox, please validate your account"
-          }));
-        });
+      console.log("Your token ", tokenToValidate)
+      // helpers.sendMail(user.email,'verify code4share account',
+      //   `your code for verification is ${tokenToValidate}`, () =>{
+      //     return callback(res.render('confirmRegistration',{
+      //       email:user.email,
+      //       message:"An email has been sent to your mailbox, please validate your account"
+      //     }));
+      //   });
     }
   });
 }

@@ -11,8 +11,7 @@ router.route('/login')
     res.render('login',{title:'Login with your credentials'});
   else
     res.redirect('/');
-})
-.post( passport.authenticate('local',{
+}).post( passport.authenticate('local',{
   failureRedirect:'/login',
   successRedirect:'/',
   failureFlash: true
